@@ -138,7 +138,7 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 #restaurants-list li {
@@ -194,12 +194,13 @@ nav h1 a {
   z-index: 1000;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: #fdfdfd none repeat scroll 0 0;
   height: 87%;
   position: fixed;
   right: 0;
   top: 80px;
-  width: 50%;
+  width: 40%;
+	padding-left: 10px;
 }
 .inside #map {
   background-color: #ccc;
