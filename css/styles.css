@@ -130,10 +130,6 @@ nav h1 a {
   width: 200px;
 }
 
-.filter-options option {
-	role: "listitem";
-}
-
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -281,4 +277,11 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media screen and (max-width: 550px) {
+	#map-container, #restaurant-container, #reviews-container {
+		width = 100%;
+		display = block;
+	}
 }
