@@ -1,3 +1,14 @@
+// navigator.serviceWorker.getRegistrations().then(function(registrations) { for(let registration of registrations) { registration.unregister() } });
+//
+// if('serviceWorker' in navigator) {
+//   console.log('service worker log');
+//   // navigator.serviceWorker.register('/sw.js').then(function(registration) {
+//   //     console.log('Service Worker Registered');
+//   //   }).catch(function(err) {
+//   //     console.log('registration failed', err);
+//   //   })
+// }
+
 let restaurant;
 var newMap;
 

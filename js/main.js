@@ -1,11 +1,12 @@
-navigator.serviceWorker.getRegistrations().then(function(registrations) { for(let registration of registrations) { registration.unregister() } });
-
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
-      console.log('Service Worker Registered');
-    }).catch(function(err) {
-      console.log('registration failed', err);
-    })
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('/js/sw.js')
+  .then(function(registration) {
+    console.log('Service Worker is registered');
+  })
+  .catch(function(err) {
+    console.log('what happened ' + err);
+  });
 }
 
 let restaurants,
