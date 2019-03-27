@@ -20,23 +20,10 @@ const cacheFiles = [
   '/js/restaurant_info.js'
 ];
 
-self.addEventListener('install', function(e) {
-  console.log('Service Worker is installed');
-
-  e.waitUntil(
+self.addEventListener('install', function(event) {
+  event.waitUntil(
     caches.open(cacheName).then(function(cache) {
-      return cache.addAll(cacheFiles);
+      return cache.addAll([cacheFiles]);
     })
   );
 });
-
-// self.addEventListener('activate', function() {
-//
-// })
-//
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(
-//     caches.match(event.request).then(function(response) {
-//     })
-//   );
-// })
