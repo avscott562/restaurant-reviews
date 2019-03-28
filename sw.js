@@ -42,17 +42,14 @@ self.addEventListener('install', function(event) {
 //   );
 // });
 //
-// self.addEventListener('fetch', function (event) {
-//   event.respondWith(
-//     caches.match(event.request).then(function(response) {
-//       if (response) {
-//         return response;
-//       } else {
-//         caches.open(cacheName).then(function(cache) {
-//           cache.put(event.request);
-//           return fetch(event.request);
-//         })
-//       }
-//     })
-//   );
-// });
+self.addEventListener('fetch', function (event) {
+  console.log('I am fetching');
+  event.respondWith(
+    caches.match(event.request).then(function(response) {
+      if (response) {
+        return response;
+      }
+      return fetch(event.request);
+    })
+  );
+});
